@@ -1,6 +1,7 @@
 // starting the server
 
 const app = require('./app');
+require('./database');
 
 async function init() {
     await app.listen(app.get('port'));
