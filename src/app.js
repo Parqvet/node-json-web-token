@@ -9,5 +9,6 @@ app.use(express.json());
 app.use(express.urlencoded({extended: false}));
 
 // routes
+app.use(require('./controllers/auth.controller'));
 
 module.exports = app;
