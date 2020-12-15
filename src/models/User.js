@@ -15,5 +15,9 @@ userSchema.methods.encryptPassword = async (password) => {
 
 }
 
+userSchema.methods.validatePassword = function(password) {
+    return bcrypt.compare(password, this.password)
+}
+
 // para crear en la base de datos vamos a tener que usar la funcion model
 module.exports = model('User', userSchema);
